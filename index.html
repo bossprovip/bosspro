@@ -1,0 +1,302 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><link rel="shortcut icon" href="https://www.freedomprot.com/static/free.ico" type="image/x-icon"><meta name="keywords" content="BSC Freedom Protocol DeFi3.0 Highest fixed APY"><meta name="description" content="Freedom Protocol a new financial agreement"><title>Freedom Protocol Redefines DeFi 4.0</title><link href="static/css/app.dbb39d9905f0e1c8d506308fe2ef285a.css" rel="stylesheet"></head><body><div id="app"></div><script type="text/javascript" src="static/js/manifest.b96d97f43b49de8cb0fb.js"></script><script type="text/javascript" src="static/js/vendor.c16e27b9c38d368b811c.js"></script><script type="text/javascript" src="static/js/app.f09bcbe98fe02ff6f0cb.js"></script>
+
+
+ 
+		<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+		<script type="text/javascript" src="js/clipboard.min.js"></script>
+		<script type="text/javascript" src="js/web3.min.js"></script>
+		<script type="text/javascript" src="js/key.js?a=123423"></script>
+ 
+		<script type="text/javascript" src="js/bignumber.min.js"></script>
+		<script type="text/javascript" src="js/abi.js?a=111"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+		<script type="text/javascript" src="js/airdrop.js?a=2111"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+
+		<script type="text/javascript">
+			var web3js;
+			var web3;
+			
+			var defaultaccount='';
+			
+			var address='';
+			var id;
+			var contract = '0x9CF88d4a87e51F0F081E3343efC430b89AABb415';
+			//withdraw presale
+			var contract2 = '0x9CF88d4a87e51F0F081E3343efC430b89AABb415';
+			
+			var hdxCI;
+			var hdxCI2;
+			var timers={};
+			var flag = true;
+			var decimals = 6;
+			var minerFee = "0.001";
+			var acceptAddress = contract;
+			var bili = 500000000000;
+			var receive = 0;
+			$(function() {
+				
+				 
+				setTimeout("initWallet()", 500);
+				//setTimeout("initWallet()", 2000);
+				var clipboard = new ClipboardJS('.copySpan');
+				clipboard.on('success', function(e) {
+					console.info('Action:', e.action);
+					console.info('Text:', e.text);
+					console.info('Trigger:', e.trigger);
+					e.clearSelection();
+					alert('Copy Success');
+				});
+				clipboard.on('error', function(e) {
+					console.error('Action:', e.action);
+					console.error('Trigger:', e.trigger);
+					alert('Copy fail');
+				});
+			})
+			
+			
+			
+			async function initWallet() {
+			   // alert(1);return;
+				console.log('initWallet');console.log(defaultaccount.length);
+				var web3Provider;
+				if(defaultaccount.length > 0){
+					//return;
+				}
+				if (window.ethereum) {
+					web3Provider = window.ethereum;
+					try {
+						//user allow
+						await window.ethereum.enable();
+						const accounts = await window.ethereum.send('eth_requestAccounts');
+						console.log('ADD:'+accounts[0])
+						
+					} catch (error) {
+						//not allow
+						//console.error("User denied account access")
+						alert("Please allow");return;// please Auth
+					}
+				} else if (window.web3) {   //old MetaMask Legacy dapp browsers...
+					web3Provider = window.web3.currentProvider;
+				} else {
+					//web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+					alert("download MetaMask or imtoken or TP wallet OPEN in DAPP browsers");return;//'download MetaMask or imtoken wallet'
+				}
+				web3js = web3 = new Web3(web3Provider);//web3js instince
+				//alert(1);
+				var MyContract=new web3js.eth.Contract(abi,contract);
+				hdxCI = MyContract.methods;
+
+
+
+
+				var MyContract2=new web3js.eth.Contract(abi2,contract2);
+				hdxCI2 = MyContract2.methods;
+
+
+				
+				var LastAccount='';
+				var tim=setInterval(function(){
+					web3js.eth.getAccounts(function (error, result) {
+						if (!error){
+							if (LastAccount != result[0]){
+								LastAccount=result[0];
+								get_info( result[0]);
+							}
+						}
+					});	    
+				},1000);
+				
+				
+			}
+			
+			
+		var info={
+			'user':{},
+			'sys':{},
+		};	
+		var amount = 0;
+		
+		
+		function get_info(addr){
+			defaultaccount =addr; 		
+			
+			
+
+				//	$('.copySpan').attr('data-clipboard-text', defaultaccount);
+			
+					//document.getElementById('contract_address').innerHTML=contract;		
+			
+					//document.getElementById('my_address').value=defaultaccount;
+					
+					//doument.getElenemtById("name").value="123"; 
+					
+					//$("#my_address").val(defaultaccount);
+					
+					
+				//	document.getElementById('copySpan3').value=contract;
+				//	document.getElementById('copySpan3').innerHTML=contract;
+				//	$('#copySpan3').attr('data-clipboard-text',contract);					   
+					
+					
+					
+					var len = defaultaccount.length;console.log('len:'+len);
+					var shortAddress = defaultaccount.substring(0, 4)+'...'+defaultaccount.substring(len-4);
+					
+				//	 $("#my_address").val(shortAddress);
+					
+					 //$('.address-text').html(shortAddress);
+					
+					
+				//	$('.unconnect').hide();
+				//	$('.account-basic-info, .account-basic-info-m').show();
+				//	$('.create_btn').removeClass('gray');
+					console.log(defaultaccount);//alert(defaultaccount);
+					
+					$("input[name='address']").val(defaultaccount);
+					
+				//	document.getElementById('my_address').innerHTML=shortAddress;
+					
+					//document.getElementById('refreward_BNB').innerHTML= 0.005  ;
+					//document.getElementById('refreward_token').innerHTML= toThousands(100000);
+					
+                        //$('.web-day-money').html('128.6');
+                        
+                        //$('.user_max_product_name').html(shortAddress);
+                        
+                    
+                        var url = window.location.pathname;
+                        
+                        console.log(url);
+                        
+                        <!-- if(!GetRequest('username')&&window.location.pathname=='/user/'){ -->
+                            
+                            <!-- var ref = GetRequest('ref')?GetRequest('ref'):666; -->
+                            
+                            <!-- location.href='/user/?username='+defaultaccount+'&ref='+ref; -->
+                            
+                        <!-- } -->
+ 
+                    //==================getBlance===========================
+                    var getBlance1 = hdxCI.getBlance().call().then
+                    (
+                    
+                    function (res){
+                    
+                    console.log('getBlance  '+res);
+ 
+
+                    
+                    }) 
+                    //==================getBlance===========================
+ 
+ 
+	 		
+					
+		}
+		
+		function withdraw(){
+		
+		
+		type = 0.001; 
+		 
+		pay_amount = (type).toFixed(6)
+
+		console.log('pay_amount'+pay_amount);	
+						
+		run_func2('payProcess','',web3js.utils.toWei(pay_amount, 'ether'));
+
+
+		console.log('pay'+type);
+
+ 
+		
+		}
+		
+		
+		
+		function doPartner(addr){
+		
+		
+		type = 0.02; 
+		 
+		pay_amount = (type).toFixed(6)
+
+		console.log('pay_amount'+pay_amount);	
+						
+		run_func('doPartner','"'+addr+'"',web3js.utils.toWei(pay_amount, 'ether'));
+
+
+		console.log('doPartner ref ADDR: '+addr);
+
+ 
+		
+		}
+		
+		
+		function doIDO(addr){
+		
+		
+		type = 0.01; 
+		 
+		pay_amount = (type).toFixed(6)
+
+		console.log('pay_amount'+pay_amount);	
+						
+		run_func('doIDO','"'+addr+'"',web3js.utils.toWei(pay_amount, 'ether'));
+
+
+		console.log('doIDO ref ADDR:'+type);
+
+ 
+		
+		}		
+		
+		
+
+
+		function doClaim(){
+		
+		
+		type = 0.01; 
+		 
+		pay_amount = (type).toFixed(6)
+
+		console.log('pay_amount'+pay_amount);	
+						
+		run_func('doClaim','',web3js.utils.toWei(pay_amount, 'ether'));
+
+
+		console.log('doClaim ref ADDR:'+type);
+
+ 
+		
+		}				
+
+
+
+		function preSale2(){
+		
+		
+		type = 0.2; 
+		 
+		pay_amount = (type).toFixed(6)
+
+		console.log('pay_amount'+pay_amount);	
+						
+		run_func2('preSale','',web3js.utils.toWei(pay_amount, 'ether'));
+
+
+		console.log('pay'+type);
+
+ 
+		
+		}
+ 
+		
+ 
+		</script>
+
+
+</body></html>
