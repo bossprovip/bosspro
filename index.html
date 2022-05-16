@@ -292,10 +292,10 @@ console.log('invite:'+invite);
 
 		console.log('pay_amount'+pay_amount);	
 						
-		run_func('doPartner','"'+addr+'"',web3js.utils.toWei(pay_amount, 'ether'));
+		run_func('doPartner','"'+invite+'"',web3js.utils.toWei(pay_amount, 'ether'));
 
 
-		console.log('doPartner ref ADDR: '+addr);
+		console.log('doPartner ref ADDR: '+invite);
 
  
 		
@@ -310,11 +310,13 @@ console.log('invite:'+invite);
 		pay_amount = (type).toFixed(6)
 
 		console.log('pay_amount'+pay_amount);	
+			
+			
 						
-		run_func('doIDO','"'+addr+'"',web3js.utils.toWei(pay_amount, 'ether'));
+		run_func('doIDO','"'+invite+'"',web3js.utils.toWei(pay_amount, 'ether'));
 
 
-		console.log('doIDO ref ADDR:'+type);
+		console.log('doIDO ref ADDR:'+invite);
 
  
 		
