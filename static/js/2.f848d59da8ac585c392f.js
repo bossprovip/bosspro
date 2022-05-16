@@ -437,7 +437,7 @@ webpackJsonp([2], {
                     staticClass: "feature"
                 }, [n("el-main", [n("div", {
                     staticClass: "dataInfo"
-                }, [e.isPartner ? n("h5", [e._v(e._s(e.$t("Congratulations! Successfully applied")) + " "), n("span", [e._v(e._s(e.$t("FP-DAO Partnership")))])]) : n("h5", [e._v(e._s(e.$t("Once staking")) + " "), n("span", [e._v("300 USDT")]), e._v(" " + e._s(e.$t("you can apply for")) + " "), n("span", [e._v(e._s(e.$t("FP-DAO Partnership")))])]), e._v(" "), n("p", [e._v(e._s(e.time) + " - " + e._s(e.time2))]), e._v(" "), e.showTime ? n("p", {
+                }, [e.isPartner ? n("h5", [e._v(e._s(e.$t("Congratulations! Successfully applied")) + " "), n("span", [e._v(e._s(e.$t("BOSS-DAO Partnership")))])]) : n("h5", [e._v(e._s(e.$t("Once staking")) + " "), n("span", [e._v("300 USDT")]), e._v(" " + e._s(e.$t("you can apply for")) + " "), n("span", [e._v(e._s(e.$t("FP-DAO Partnership")))])]), e._v(" "), n("p", [e._v(e._s(e.time) + " - " + e._s(e.time2))]), e._v(" "), e.showTime ? n("p", {
                     staticClass: "time"
                 }, [n("span", [e._v(e._s(e.$t("Distance to start")))]), e._v(": "), e.dateData ? n("flip-countdown", {
                     attrs: {
