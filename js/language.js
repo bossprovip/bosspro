@@ -95,7 +95,7 @@ var language={
 		'v10':'FBD Holdings',
 		'v11':'Today Estimation / Total Earn',		
 		
-		'v12':'BIG Bonus Time BUY>0.01% BOSS gift 0.01%',	
+		'v12':'BIG Bonus Time BUY>0.01% Free gift 0.01%',	
 		'v13':'FOMO3D JACKPOT / Time',
 		
 		'v14':'Total BNB Paid To FBD Holders',
