@@ -168,7 +168,7 @@ webpackJsonp([6], {
                     staticClass: "card"
                 }, [s("p", {
                     staticClass: "title"
-                }, [t._v(t._s(t.$t("FREE Price")))]), t._v(" "), s("p", {
+                }, [t._v(t._s(t.$t("BOSS Price")))]), t._v(" "), s("p", {
                     staticClass: "value"
                 }, [t._v("$" + t._s(t.price))])])]), t._v(" "), s("div", {
                     staticClass: "oDiv"
@@ -217,7 +217,7 @@ webpackJsonp([6], {
                     staticClass: "title"
                 }, [t._v(t._s(t.$t("Number of Black Holes")))]), t._v(" "), s("p", {
                     staticClass: "value"
-                }, [t._v(t._s(t.FundValue) + " FREE")])])]), t._v(" "), s("div", {
+                }, [t._v(t._s(t.FundValue) + " BOSS")])])]), t._v(" "), s("div", {
                     staticClass: "oDiv"
                 }, [s("div", {
                     staticClass: "card"
@@ -233,9 +233,9 @@ webpackJsonp([6], {
                     staticClass: "card"
                 }, [s("p", {
                     staticClass: "title"
-                }, [t._v(t._s(t.$t("Medal of Freedom NFT Dividend")))]), t._v(" "), s("p", {
+                }, [t._v(t._s(t.$t("Medal of BOSS NFT Dividend")))]), t._v(" "), s("p", {
                     staticClass: "value"
-                }, [t._v(t._s(t.bonus) + " FREE")])])]), t._v(" "), s("div", {
+                }, [t._v(t._s(t.bonus) + " BOSS")])])]), t._v(" "), s("div", {
                     staticClass: "oDiv"
                 }, [s("div", {
                     staticClass: "card"
@@ -243,7 +243,7 @@ webpackJsonp([6], {
                     staticClass: "title"
                 }, [t._v(t._s(t.$t("FP-DAO Rewards")))]), t._v(" "), s("p", {
                     staticClass: "value"
-                }, [t._v(t._s(t.reward) + " FREE")])])])]), t._v(" "), s("div", {
+                }, [t._v(t._s(t.reward) + " BOSS")])])])]), t._v(" "), s("div", {
                     staticClass: "row2"
                 }, [s("div", {
                     staticClass: "oDiv"
@@ -259,7 +259,7 @@ webpackJsonp([6], {
                     staticClass: "card"
                 }, [s("p", {
                     staticClass: "title"
-                }, [t._v(t._s(t.$t("Freedom Fund")))]), t._v(" "), s("p", {
+                }, [t._v(t._s(t.$t("BOSS Fund")))]), t._v(" "), s("p", {
                     staticClass: "value"
                 }, [t._v("$" + t._s(t.treasuryReceiverUSDT))])])])])])])], 1)])
             },

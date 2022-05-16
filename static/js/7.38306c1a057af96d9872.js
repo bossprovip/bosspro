@@ -61,16 +61,16 @@ webpackJsonp([7], {
                 return {
                     connectedAccount: "",
                     headerActive: "5",
-                    freeValue: 0,
+                    BOSSValue: 0,
                     price: "",
-                    freePrice: "",
-                    freePrice2: "",
+                    BOSSPrice: "",
+                    BOSSPrice2: "",
                     amountNum: 0,
                     apyNum: "183394.2",
                     sliderNum: 30,
                     investment: 0,
                     wealth: 0,
-                    freeReward: 0,
+                    BOSSReward: 0,
                     potential: 0,
                     timer: null
                 }
@@ -80,7 +80,7 @@ webpackJsonp([7], {
                     Object(N.a)()
                 },
                 maxAmount: function() {
-                    this.amountNum = this.freeValue,
+                    this.amountNum = this.BOSSValue,
                     this.handleInput(String(this.amountNum))
                 },
                 maxAmount2: function() {
@@ -88,12 +88,12 @@ webpackJsonp([7], {
                     this.handleInput2(String(this.apyNum))
                 },
                 maxAmount3: function() {
-                    this.freePrice = this.price,
-                    this.handleInput3(String(this.freePrice))
+                    this.BOSSPrice = this.price,
+                    this.handleInput3(String(this.BOSSPrice))
                 },
                 maxAmount4: function() {
-                    this.freePrice2 = this.price,
-                    this.handleInput4(String(this.freePrice2))
+                    this.BOSSPrice2 = this.price,
+                    this.handleInput4(String(this.BOSSPrice2))
                 },
                 init: function(e) {
                     var t = this;
@@ -107,9 +107,9 @@ webpackJsonp([7], {
                                           , i = a[0]
                                           , r = a[1];
                                         t.price = Object(N.h)(Number(b.c.formatUnits(i)), 4),
-                                        t.freeValue = Object(N.h)(Number(b.c.formatUnits(r, 8)), 4),
-                                        t.freePrice = t.price,
-                                        t.freePrice2 = t.price
+                                        t.BOSSValue = Object(N.h)(Number(b.c.formatUnits(r, 8)), 4),
+                                        t.BOSSPrice = t.price,
+                                        t.BOSSPrice2 = t.price
                                     }).catch(function(e) {
                                         t.$message.closeAll(),
                                         t.$message.error(e)
@@ -135,32 +135,32 @@ webpackJsonp([7], {
                     var t = a("9al3");
                     this.amountNum = e.replace(/[^\d\.]/g, "").replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
                     var i = e.replace(/[^\d\.]/g, "").replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
-                    this.investment = Object(N.f)(Object(N.c)(i, this.freePrice)),
+                    this.investment = Object(N.f)(Object(N.c)(i, this.BOSSPrice)),
                     this.wealth = Object(N.f)(Object(N.c)(i, this.price));
                     for (var s = this.amountNum, r = 24 * this.sliderNum * 60 / 15, c = 1; c <= r; c++)
                         s = t.chain(s).add(Object(N.c)(s, .0214447 / 100)).done();
-                    this.freeReward = 0 === Number(e) ? 0 : Object(N.f)(Object(N.c)(s, 1)),
-                    this.potential = 0 === Number(e) ? 0 : Object(N.f)(Object(N.c)(this.freePrice2, this.freeReward))
+                    this.BOSSReward = 0 === Number(e) ? 0 : Object(N.f)(Object(N.c)(s, 1)),
+                    this.potential = 0 === Number(e) ? 0 : Object(N.f)(Object(N.c)(this.BOSSPrice2, this.BOSSReward))
                 },
                 handleInput2: function(e) {
-                    this.freeReward = 0 === Number(e) ? 0 : Object(N.h)(Object(N.c)(e / 1e4 / 365 * this.sliderNum, this.amountNum), 5),
-                    this.potential = Object(N.f)(Object(N.c)(this.freeReward, this.freePrice2))
+                    this.BOSSReward = 0 === Number(e) ? 0 : Object(N.h)(Object(N.c)(e / 1e4 / 365 * this.sliderNum, this.amountNum), 5),
+                    this.potential = Object(N.f)(Object(N.c)(this.BOSSReward, this.BOSSPrice2))
                 },
                 handleInput3: function(e) {
-                    this.freePrice = e.replace(/[^\d\.]/g, "").replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
+                    this.BOSSPrice = e.replace(/[^\d\.]/g, "").replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
                     var t = e.replace(/[^\d\.]/g, "").replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
                     this.investment = Object(N.f)(Object(N.c)(this.amountNum, t))
                 },
                 handleInput4: function(e) {
-                    this.freePrice2 = e.replace(/[^\d\.]/g, "").replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
+                    this.BOSSPrice2 = e.replace(/[^\d\.]/g, "").replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
                     var t = e.replace(/[^\d\.]/g, "").replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
-                    this.potential = Object(N.f)(Object(N.c)(this.freeReward, t))
+                    this.potential = Object(N.f)(Object(N.c)(this.BOSSReward, t))
                 },
                 handleSliderNum: function(e) {
                     for (var t = a("9al3"), i = this.amountNum, s = 24 * e * 60 / 15, r = 1; r < s; r++)
                         i = t.chain(i).add(Object(N.c)(i, .0214447 / 100)).done();
-                    this.freeReward = 0 === Number(this.amountNum) ? 0 : Object(N.f)(Object(N.c)(i, 1)),
-                    this.potential = 0 === Number(this.amountNum) ? 0 : Object(N.f)(Object(N.c)(this.freePrice2, this.freeReward))
+                    this.BOSSReward = 0 === Number(this.amountNum) ? 0 : Object(N.f)(Object(N.c)(i, 1)),
+                    this.potential = 0 === Number(this.amountNum) ? 0 : Object(N.f)(Object(N.c)(this.BOSSPrice2, this.BOSSReward))
                 }
             },
             beforeDestroy: function() {
@@ -215,7 +215,7 @@ webpackJsonp([7], {
                     staticClass: "card"
                 }, [a("p", {
                     staticClass: "title"
-                }, [e._v(e._s(e.$t("$FREE Price")))]), e._v(" "), a("p", {
+                }, [e._v(e._s(e.$t("$BOSS Price")))]), e._v(" "), a("p", {
                     staticClass: "value"
                 }, [e._v("$" + e._s(e.price))])])]), e._v(" "), a("div", {
                     staticClass: "oDiv"
@@ -231,9 +231,9 @@ webpackJsonp([7], {
                     staticClass: "card"
                 }, [a("p", {
                     staticClass: "title"
-                }, [e._v(e._s(e.$t("Your $FREE Balance")))]), e._v(" "), a("p", {
+                }, [e._v(e._s(e.$t("Your $BOSS Balance")))]), e._v(" "), a("p", {
                     staticClass: "value"
-                }, [e._v(e._s(e.freeValue) + " FREE")])])])]), e._v(" "), a("div", {
+                }, [e._v(e._s(e.BOSSValue) + " BOSS")])])])]), e._v(" "), a("div", {
                     staticClass: "areaInput"
                 }, [a("div", {
                     staticClass: "container"
@@ -241,7 +241,7 @@ webpackJsonp([7], {
                     staticClass: "iDiv"
                 }, [a("div", {
                     staticClass: "card"
-                }, [a("p", [e._v(e._s(e.$t("$FREE Amount")))]), e._v(" "), a("div", {
+                }, [a("p", [e._v(e._s(e.$t("$BOSS Amount")))]), e._v(" "), a("div", {
                     staticClass: "inputDiv"
                 }, [a("el-input", {
                     ref: "ref1",
@@ -294,7 +294,7 @@ webpackJsonp([7], {
                     staticClass: "iDiv"
                 }, [a("div", {
                     staticClass: "card"
-                }, [a("p", [e._v(e._s(e.$t("$FREE price at purchase ($)")))]), e._v(" "), a("div", {
+                }, [a("p", [e._v(e._s(e.$t("$BOSS price at purchase ($)")))]), e._v(" "), a("div", {
                     staticClass: "inputDiv"
                 }, [a("el-input", {
                     ref: "ref3",
@@ -304,15 +304,15 @@ webpackJsonp([7], {
                     },
                     on: {
                         input: function(t) {
-                            return e.handleInput3(e.freePrice)
+                            return e.handleInput3(e.BOSSPrice)
                         }
                     },
                     model: {
-                        value: e.freePrice,
+                        value: e.BOSSPrice,
                         callback: function(t) {
-                            e.freePrice = t
+                            e.BOSSPrice = t
                         },
-                        expression: "freePrice"
+                        expression: "BOSSPrice"
                     }
                 }), e._v(" "), a("button", {
                     on: {
@@ -322,7 +322,7 @@ webpackJsonp([7], {
                     staticClass: "iDiv"
                 }, [a("div", {
                     staticClass: "card"
-                }, [a("p", [e._v(e._s(e.$t("Future $FREE market price ($)")))]), e._v(" "), a("div", {
+                }, [a("p", [e._v(e._s(e.$t("Future $BOSS market price ($)")))]), e._v(" "), a("div", {
                     staticClass: "inputDiv"
                 }, [a("el-input", {
                     ref: "ref4",
@@ -332,15 +332,15 @@ webpackJsonp([7], {
                     },
                     on: {
                         input: function(t) {
-                            return e.handleInput4(e.freePrice2)
+                            return e.handleInput4(e.BOSSPrice2)
                         }
                     },
                     model: {
-                        value: e.freePrice2,
+                        value: e.BOSSPrice2,
                         callback: function(t) {
-                            e.freePrice2 = t
+                            e.BOSSPrice2 = t
                         },
-                        expression: "freePrice2"
+                        expression: "BOSSPrice2"
                     }
                 }), e._v(" "), a("button", {
                     on: {
@@ -373,7 +373,7 @@ webpackJsonp([7], {
                     staticClass: "oDiv"
                 }, [a("p", [e._v(e._s(e.$t("Current wealth")))]), e._v(" "), a("h5", [e._v("$" + e._s(e.wealth))])]), e._v(" "), a("div", {
                     staticClass: "oDiv"
-                }, [a("p", [e._v(e._s(e.$t("$FREE rewards estimation")))]), e._v(" "), a("h5", [e._v(e._s(e.freeReward) + " FREE")])]), e._v(" "), a("div", {
+                }, [a("p", [e._v(e._s(e.$t("$BOSS rewards estimation")))]), e._v(" "), a("h5", [e._v(e._s(e.BOSSReward) + " BOSS")])]), e._v(" "), a("div", {
                     staticClass: "oDiv"
                 }, [a("p", [e._v(e._s(e.$t("Potential return")))]), e._v(" "), a("h5", [e._v("$" + e._s(e.potential))])])])])])], 1)])
             },

@@ -226,7 +226,7 @@ webpackJsonp([5], {
                     staticClass: "title"
                 }, [t._v(t._s(t.$t("Medal Dividend")))]), t._v(" "), i("p", {
                     staticClass: "value"
-                }, [t._v(t._s(t.nftReward) + " FREE")])])])]), t._v(" "), i("div", {
+                }, [t._v(t._s(t.nftReward) + " BOSS")])])])]), t._v(" "), i("div", {
                     staticClass: "row1"
                 }, [i("div", {
                     staticClass: "oDiv"
@@ -244,7 +244,7 @@ webpackJsonp([5], {
                     staticClass: "title"
                 }, [t._v(t._s(t.$t("One Medal Estimated dividends per day")))]), t._v(" "), i("p", {
                     staticClass: "value"
-                }, [t._v(t._s(t.day) + " FREE")])])])]), t._v(" "), i("div", {
+                }, [t._v(t._s(t.day) + " BOSS")])])])]), t._v(" "), i("div", {
                     staticClass: "row1"
                 }, [i("div", {
                     staticClass: "oDiv"
@@ -254,7 +254,7 @@ webpackJsonp([5], {
                     staticClass: "title"
                 }, [t._v(t._s(t.$t("One Medal Estimated dividends per Month")))]), t._v(" "), i("p", {
                     staticClass: "value"
-                }, [t._v(t._s(t.month) + " FREE")])])]), t._v(" "), i("div", {
+                }, [t._v(t._s(t.month) + " BOSS")])])]), t._v(" "), i("div", {
                     staticClass: "oDiv"
                 }, [i("div", {
                     staticClass: "card"
@@ -262,7 +262,7 @@ webpackJsonp([5], {
                     staticClass: "title"
                 }, [t._v(t._s(t.$t("One Medal Estimated dividends per year")))]), t._v(" "), i("p", {
                     staticClass: "value"
-                }, [t._v(t._s(t.year) + " FREE")])])])])])], 1), t._v(" "), i("div", {
+                }, [t._v(t._s(t.year) + " BOSS")])])])])])], 1), t._v(" "), i("div", {
                     staticClass: "claimDiv"
                 }, [i("p", [t._v(t._s(t.$t("Dividends you can receive")) + ": " + t._s(t.claimAmount))]), t._v(" "), i("el-button", {
                     attrs: {
@@ -325,7 +325,7 @@ webpackJsonp([5], {
                     }
                 }, ["wait" === t.dialogType ? i("div", [i("i", {
                     staticClass: "el-icon-loading"
-                }), t._v(" "), i("p", [t._v(t._s(t.$t("Waiting...")))]), t._v(" "), i("span", [t._v(t._s(t.$t("Please Confirm in Your Wallet")))])]) : t._e(), t._v(" "), "success" === t.dialogType ? i("div", [i("p", [t._v(t._s(t.$t("Success! You have swapped the")) + " " + t._s(t.buySuccess) + " FREE")]), t._v(" "), i("el-button", {
+                }), t._v(" "), i("p", [t._v(t._s(t.$t("Waiting...")))]), t._v(" "), i("span", [t._v(t._s(t.$t("Please Confirm in Your Wallet")))])]) : t._e(), t._v(" "), "success" === t.dialogType ? i("div", [i("p", [t._v(t._s(t.$t("Success! You have swapped the")) + " " + t._s(t.buySuccess) + " BOSS")]), t._v(" "), i("el-button", {
                     attrs: {
                         type: "primary"
                     },

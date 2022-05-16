@@ -93,11 +93,11 @@ webpackJsonp([2], {
                     unPartnerNum: 0,
                     partnerNum: 0,
                     usdtBalance: 0,
-                    freeBalance: 0,
+                    BOSSBalance: 0,
                     canClaim: !0,
                     nftName: "",
                     stakeLoading: !1,
-                    free001Token: "",
+                    BOSS001Token: "",
                     approveLoading: !1,
                     claimLoading: !1,
 					totalPartners:'...',
@@ -122,7 +122,7 @@ webpackJsonp([2], {
                                         t.$message.closeAll(),
                                         t.$message.error(e)
                                     }),
-                                    t.free001Token = C.d,
+                                    t.BOSS001Token = C.d,
                                     a.next = 4,
                                     Object(N.g)(e);
                                 case 4:
@@ -132,7 +132,7 @@ webpackJsonp([2], {
                                 case 7:
                                     return i = a.sent,
                                     t.usdtBalance = 0 === Number(b.c.formatUnits(n)) ? 0 : Object(w.h)(Number(b.c.formatUnits(n)), 4),
-                                    t.freeBalance = Number(i),
+                                    t.BOSSBalance = Number(i),
                                     a.next = 12,
                                     Object(N.e)(e);
                                 case 12:
@@ -338,8 +338,8 @@ webpackJsonp([2], {
                     this.wait = !0,
                     this.dialogType = "wait",
                     this.stakeLoading = !0;
-                    // Number(this.freeBalance) < 1 ? (this.wait = !0,
-                    // this.dialogType = "freeNoAmount",
+                    // Number(this.BOSSBalance) < 1 ? (this.wait = !0,
+                    // this.dialogType = "BOSSNoAmount",
                     // this.stakeLoading = !1) : Number(this.usdtBalance) < 300 ? (this.wait = !0,
                     // this.dialogType = "usdtNoAmount",
                     // this.stakeLoading = !1) : Object(N.b)().then(function(t) {
@@ -462,12 +462,12 @@ webpackJsonp([2], {
                     staticClass: "title"
                 }, [e._v(e._s(e.$t("Number of Partnership Applicants")))])])]), e._v(" "), n("div", {
                     staticClass: "addressDiv"
-                }, [n("p", [e._v(e._s(e.$t("$FREE001 Contract")) + ": "), n("span", [e._v(e._s(e.free001Token))]), e._v(" "), n("i", {
+                }, [n("p", [e._v(e._s(e.$t("$BOSS001 Contract")) + ": "), n("span", [e._v(e._s(e.BOSS001Token))]), e._v(" "), n("i", {
                     directives: [{
                         name: "clipboard",
                         rawName: "v-clipboard:copy",
-                        value: e.free001Token,
-                        expression: "free001Token",
+                        value: e.BOSS001Token,
+                        expression: "BOSS001Token",
                         arg: "copy"
                     }, {
                         name: "clipboard",
@@ -534,7 +534,7 @@ webpackJsonp([2], {
                     staticClass: "noPartner"
                 }, [n("div", [n("p", {
                     staticClass: "dataNum"
-                }, [n("span", [n("label", [e._v(e._s(e.$t("Balance")) + ":")]), e._v(" " + e._s(e.usdtBalance) + " USDT")]), n("span", [n("label", [e._v(e._s(e.$t("Balance")) + ":")]), e._v(" " + e._s(e.freeBalance) + " $FREE001")])]), e._v(" "), e.connectedAccount ? Number(e.endTime) < Math.round((new Date).getTime() / 1e3) ? n("el-button", {
+                }, [n("span", [n("label", [e._v(e._s(e.$t("Balance")) + ":")]), e._v(" " + e._s(e.usdtBalance) + " USDT")]), n("span", [n("label", [e._v(e._s(e.$t("Balance")) + ":")]), e._v(" " + e._s(e.BOSSBalance) + " $BOSS001")])]), e._v(" "), e.connectedAccount ? Number(e.endTime) < Math.round((new Date).getTime() / 1e3) ? n("el-button", {
                     attrs: {
                         type: "primary",
                         disabled: !0
@@ -570,21 +570,21 @@ webpackJsonp([2], {
                         src: a("JUZT"),
                         alt: "rule"
                     }
-                }), n("span", [e._v(e._s(e.$t("After claiming 500 $FREE001, please confirm your team structure of FP-DAO before $FREE listing (FP-DAO binding relations will be confirmed once you send at least 1 $FREE001 to addresses never with $FREE001 before).")))])])]), e._v(" "), n("div", {
+                }), n("span", [e._v(e._s(e.$t("After claiming 500 $BOSS001, please confirm your team structure of FP-DAO before $BOSS listing (FP-DAO binding relations will be confirmed once you send at least 1 $BOSS001 to addresses never with $BOSS001 before).")))])])]), e._v(" "), n("div", {
                     staticClass: "oRule"
                 }, [n("p", [n("img", {
                     attrs: {
                         src: a("J3T/"),
                         alt: "rule"
                     }
-                }), n("span", [e._v(e._s(e.$t("Once having invited at least 10 IDO participants, you have fulfilled partner tasks: your staked 300 USDT will be returned and you are eligible for extra $FREE purchase allocation worth 200 USDT; and you will be granted an NFT of Medal of Freedom (transferrable to others), with which you will enjoy FP dividends.")))])])]), e._v(" "), n("div", {
+                }), n("span", [e._v(e._s(e.$t("Once having invited at least 10 IDO participants, you have fulfilled partner tasks: your staked 300 USDT will be returned and you are eligible for extra $BOSS purchase allocation worth 200 USDT; and you will be granted an NFT of Medal of BOSS (transferrable to others), with which you will enjoy FP dividends.")))])])]), e._v(" "), n("div", {
                     staticClass: "oRule"
                 }, [n("p", [n("img", {
                     attrs: {
                         src: a("6+yQ"),
                         alt: "rule"
                     }
-                }), n("span", [e._v(e._s(e.$t("5% of sell transaction fee will become dividends distributed to all addresses holding NFT of Medal of Freedom; such dividends are generated whenever there is a sell trade, and partners can claim it through Medal of Freedom interface. Claimable dividends for each NFT of Medal of Freedom = Total Dividends/Number of Medal of Freedom NFTs.")))])])]), e._v(" "), n("small", [n("img", {
+                }), n("span", [e._v(e._s(e.$t("5% of sell transaction fee will become dividends distributed to all addresses holding NFT of Medal of BOSS; such dividends are generated whenever there is a sell trade, and partners can claim it through Medal of BOSS interface. Claimable dividends for each NFT of Medal of BOSS = Total Dividends/Number of Medal of BOSS NFTs.")))])])]), e._v(" "), n("small", [n("img", {
                     staticClass: "smallIcon",
                     attrs: {
                         src: a("DeaW"),
@@ -620,7 +620,7 @@ webpackJsonp([2], {
                             e.wait = !1
                         }
                     }
-                }, [e._v(e._s(e.$t("Close")))])], 1) : e._e(), e._v(" "), "claimDone" === e.dialogType ? n("div", [n("p", [e._v(e._s(e.$t("300 USDT are deposited in your wallet. Congrats! Medal of Freedom is claimable for you!")))]), e._v(" "), n("p", [n("img", {
+                }, [e._v(e._s(e.$t("Close")))])], 1) : e._e(), e._v(" "), "claimDone" === e.dialogType ? n("div", [n("p", [e._v(e._s(e.$t("300 USDT are deposited in your wallet. Congrats! Medal of BOSS is claimable for you!")))]), e._v(" "), n("p", [n("img", {
                     attrs: {
                         src: a("Cjti"),
                         alt: "icon"
@@ -660,14 +660,14 @@ webpackJsonp([2], {
                             e.wait = !1
                         }
                     }
-                }, [e._v(e._s(e.$t("Close")))])], 1) : e._e(), e._v(" "), "freeNoAmount" === e.dialogType ? n("div", [n("i", {
+                }, [e._v(e._s(e.$t("Close")))])], 1) : e._e(), e._v(" "), "BOSSNoAmount" === e.dialogType ? n("div", [n("i", {
                     staticClass: "el-icon-error",
                     staticStyle: {
                         color: "#e76060"
                     }
                 }), e._v(" "), n("p", {
                     staticClass: "fail"
-                }, [e._v(e._s(e.$t("There is no $FREE001 in your wallet, please contact your FP-DAO organization.")))]), e._v(" "), n("el-button", {
+                }, [e._v(e._s(e.$t("There is no $BOSS001 in your wallet, please contact your FP-DAO organization.")))]), e._v(" "), n("el-button", {
                     on: {
                         click: function(t) {
                             e.wait = !1

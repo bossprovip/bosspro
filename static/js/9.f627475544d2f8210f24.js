@@ -76,7 +76,7 @@ webpackJsonp([9], {
                 u()(e, "nftArr", []),
                 u()(e, "wait", !1),
                 u()(e, "dialogType", "failed"),
-                u()(e, "freeValue", 0),
+                u()(e, "BOSSValue", 0),
                 e
             },
             methods: {
@@ -100,13 +100,13 @@ webpackJsonp([9], {
                                     Object(_.a)(e);
                                 case 6:
                                     return r = a.sent,
-                                    t.freeValue = Number(m.c.formatUnits(r, 8)),
+                                    t.BOSSValue = Number(m.c.formatUnits(r, 8)),
                                     a.next = 10,
                                     Object(g.c)(e);
                                 case 10:
                                     s = a.sent,
-                                    (s._isClaimed ? t.freeValue : t.freeValue + Number(m.c.formatUnits(s._rewardAmount, 8))) < 1e3 && (t.wait = !0),
-                                    l = "https:///api.freedomprot.com/api",
+                                    (s._isClaimed ? t.BOSSValue : t.BOSSValue + Number(m.c.formatUnits(s._rewardAmount, 8))) < 1e3 && (t.wait = !0),
+                                    l = "https:///api.BOSSdomprot.com/api",
                                     t.$axios.post(l + "/getTeamStatistics", {
                                         address: e
                                     }).then(function(e) {
@@ -132,7 +132,7 @@ webpackJsonp([9], {
                         pageSize: this.search.pageSize
                     };
                     this.listLoading = !0;
-                    this.$axios.post("https:///api.freedomprot.com/api/getTeamDetail", a).then(function(e) {
+                    this.$axios.post("https:///api.BOSSdomprot.com/api/getTeamDetail", a).then(function(e) {
                         t.listLoading = !1,
                         t.tableTotal = e.data.Data.totalNum,
                         t.tableData = e.data.Data.list.map(function(e) {
@@ -331,7 +331,7 @@ webpackJsonp([9], {
                     }
                 }, ["wait" === e.dialogType ? a("div", [a("i", {
                     staticClass: "el-icon-loading"
-                }), e._v(" "), a("p", [e._v(e._s(e.$t("Waiting...")))]), e._v(" "), a("span", [e._v(e._s(e.$t("Please Confirm in Your Wallet")))])]) : e._e(), e._v(" "), "success" === e.dialogType ? a("div", [a("p", [e._v(e._s(e.$t("Success! You have swapped the")) + " " + e._s(e.buySuccess) + " FREE")]), e._v(" "), a("el-button", {
+                }), e._v(" "), a("p", [e._v(e._s(e.$t("Waiting...")))]), e._v(" "), a("span", [e._v(e._s(e.$t("Please Confirm in Your Wallet")))])]) : e._e(), e._v(" "), "success" === e.dialogType ? a("div", [a("p", [e._v(e._s(e.$t("Success! You have swapped the")) + " " + e._s(e.buySuccess) + " BOSS")]), e._v(" "), a("el-button", {
                     attrs: {
                         type: "primary"
                     },
@@ -356,7 +356,7 @@ webpackJsonp([9], {
                     }
                 }, [e._v(e._s(e.$t("Close")))])], 1) : e._e(), e._v(" "), "failed" === e.dialogType ? a("div", [a("p", {
                     staticClass: "fail"
-                }, [e._v(e._s(e.$t("The wallet balance is less than 1000 $FREE")))]), e._v(" "), a("a", {
+                }, [e._v(e._s(e.$t("The wallet balance is less than 1000 $BOSS")))]), e._v(" "), a("a", {
                     staticClass: "btnA",
                     attrs: {
                         href: "https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x880BCe9321c79cAc1D290De6d31DDE722C606165",

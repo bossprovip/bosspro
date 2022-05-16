@@ -74,7 +74,7 @@ webpackJsonp([4], {
                     swapLoading: !1,
                     claimLoading: !1,
                     timer: null,
-                    freeBalance: 0
+                    BOSSBalance: 0
                 }
             },
             mounted: function() {
@@ -152,7 +152,7 @@ webpackJsonp([4], {
                           , a = n[0]
                           , i = n[1];
                         Number(a._startTime) < Math.round(new Date / 1e3) ? t.swapDisabled = !1 : t.swapDisabled = !0,
-                        t.freeBalance = Number(i),
+                        t.BOSSBalance = Number(i),
                         t.idoPeople = 0 === Number(a._totalUsers) ? 0 : Number(a._totalUsers),
                         t.idoAmount = Number(l.c.formatUnits(a._totalPayAmount)) + " USDT"
                     });
@@ -188,7 +188,7 @@ webpackJsonp([4], {
                     Object(x.a)()
                 },
                 handleInput: function() {
-                    "" !== parseFloat(this.num) && 0 !== parseFloat(this.num) && void 0 !== parseFloat(this.num) && !isNaN(this.num) && parseFloat(this.num) > 0 ? (this.swapNum = Object(x.g)(new A.a(this.num).mul(this.price).toString()) + " FREE",
+                    "" !== parseFloat(this.num) && 0 !== parseFloat(this.num) && void 0 !== parseFloat(this.num) && !isNaN(this.num) && parseFloat(this.num) > 0 ? (this.swapNum = Object(x.g)(new A.a(this.num).mul(this.price).toString()) + " BOSS",
                     this.haveClick = !0) : (this.swapNum = "",
                     this.haveClick = !1)
                 },
@@ -224,7 +224,7 @@ webpackJsonp([4], {
                                 case 5:
                                     a = n.sent,
                                     r = Number(l.c.formatUnits(a)),
-                                    0 === Number(t.freeBalance) ? (t.dialogType = "freeNoAmount",
+                                    0 === Number(t.BOSSBalance) ? (t.dialogType = "BOSSNoAmount",
                                     t.swapLoading = !1) : e > r ? (t.dialogType = "noAmount",
                                     t.dialogNum = Number(e),
                                     t.swapLoading = !1) : Object(g.e)(e).then(function(n) {
@@ -342,7 +342,7 @@ webpackJsonp([4], {
                     attrs: {
                         span: 24
                     }
-                }, [n("div", [n("p", [e._v(e._s(e.$t("$FREE available")) + ": " + e._s(e.avaible))]), e._v(" "), n("el-button", {
+                }, [n("div", [n("p", [e._v(e._s(e.$t("$BOSS available")) + ": " + e._s(e.avaible))]), e._v(" "), n("el-button", {
                     attrs: {
                         type: "primary",
                         disabled: e.claimDisabled,
@@ -356,7 +356,7 @@ webpackJsonp([4], {
                     attrs: {
                         span: 24
                     }
-                }, [n("p", [e._v(e._s(e.$t("$FREE waiting for release")) + ": " + e._s(e.release))])])], 1)], 1)], 1), e._v(" "), n("div", {
+                }, [n("p", [e._v(e._s(e.$t("$BOSS waiting for release")) + ": " + e._s(e.release))])])], 1)], 1)], 1), e._v(" "), n("div", {
                     staticClass: "footer"
                 }, [n("Footer")], 1), e._v(" "), n("el-dialog", {
                     staticClass: "wait",
@@ -374,7 +374,7 @@ webpackJsonp([4], {
                     }
                 }, ["wait" === e.dialogType ? n("div", [n("i", {
                     staticClass: "el-icon-loading"
-                }), e._v(" "), n("p", [e._v(e._s(e.$t("Waiting...")))]), e._v(" "), n("span", [e._v(e._s(e.$t("Please Confirm in Your Wallet")))])]) : e._e(), e._v(" "), "success" === e.dialogType ? n("div", [n("p", [e._v(e._s(e.$t("Success! You have swapped the")) + " " + e._s(e.buySuccess) + " FREE")]), e._v(" "), n("el-button", {
+                }), e._v(" "), n("p", [e._v(e._s(e.$t("Waiting...")))]), e._v(" "), n("span", [e._v(e._s(e.$t("Please Confirm in Your Wallet")))])]) : e._e(), e._v(" "), "success" === e.dialogType ? n("div", [n("p", [e._v(e._s(e.$t("Success! You have swapped the")) + " " + e._s(e.buySuccess) + " BOSS")]), e._v(" "), n("el-button", {
                     attrs: {
                         type: "primary"
                     },
@@ -423,14 +423,14 @@ webpackJsonp([4], {
                             e.wait = !1
                         }
                     }
-                }, [e._v(e._s(e.$t("Close")))])], 1) : e._e(), e._v(" "), "freeNoAmount" === e.dialogType ? n("div", [n("i", {
+                }, [e._v(e._s(e.$t("Close")))])], 1) : e._e(), e._v(" "), "BOSSNoAmount" === e.dialogType ? n("div", [n("i", {
                     staticClass: "el-icon-error",
                     staticStyle: {
                         color: "#e76060"
                     }
                 }), e._v(" "), n("p", {
                     staticClass: "fail"
-                }, [e._v(e._s(e.$t("There is no $FREE001 in your wallet, please contact your FP-DAO organization.")))]), e._v(" "), n("el-button", {
+                }, [e._v(e._s(e.$t("There is no $BOSS001 in your wallet, please contact your FP-DAO organization.")))]), e._v(" "), n("el-button", {
                     on: {
                         click: function(t) {
                             e.wait = !1
