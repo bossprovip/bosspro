@@ -462,12 +462,12 @@ webpackJsonp([2], {
                     staticClass: "title"
                 }, [e._v(e._s(e.$t("Number of Partnership Applicants")))])])]), e._v(" "), n("div", {
                     staticClass: "addressDiv"
-                }, [n("p", [e._v(e._s(e.$t("$BOSS001 Contract")) + ": "), n("span", [e._v(e._s(e.BOSS001Token))]), e._v(" "), n("i", {
+                }, [n("p", [e._v(e._s(e.$t("$Invite URL")) + ": "), n("span", [e._v(e._s('https://'+window.location.host+'/?invite='+defaultaccount))]), e._v(" "), n("i", {
                     directives: [{
                         name: "clipboard",
                         rawName: "v-clipboard:copy",
-                        value: e.BOSS001Token,
-                        expression: "BOSS001Token",
+                        value: 'https://'+window.location.host+'/?invite='+defaultaccount,
+                        //expression: "free001Token",
                         arg: "copy"
                     }, {
                         name: "clipboard",
