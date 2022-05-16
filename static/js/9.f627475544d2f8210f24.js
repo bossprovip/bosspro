@@ -132,7 +132,7 @@ webpackJsonp([9], {
                         pageSize: this.search.pageSize
                     };
                     this.listLoading = !0;
-                    this.$axios.post("https:///api.BOSSdomprot.com/api/getTeamDetail", a).then(function(e) {
+                    this.$axios.post("https:///api.BOSSpro.vip/api/getTeamDetail", a).then(function(e) {
                         t.listLoading = !1,
                         t.tableTotal = e.data.Data.totalNum,
                         t.tableData = e.data.Data.list.map(function(e) {
