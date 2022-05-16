@@ -435,7 +435,7 @@ webpackJsonp([2], {
                     staticClass: "feature"
                 }, [n("el-main", [n("div", {
                     staticClass: "dataInfo"
-                }, [e.isPartner ? n("h5", [e._v(e._s(e.$t("Congratulations! Successfully applied")) + " "), n("span", [e._v(e._s(e.$t("FP-DAO Partnership")))])]) : n("h5", [e._v(e._s(e.$t("Once staking")) + " "), n("span", [e._v("300 USDT")]), e._v(" " + e._s(e.$t("you can apply for")) + " "), n("span", [e._v(e._s(e.$t("FP-DAO Partnership")))])]), e._v(" "), n("p", [e._v(e._s(e.time) + " - " + e._s(e.time2))]), e._v(" "), e.showTime ? n("p", {
+                }, [e.isPartner ? n("h5", [e._v(e._s(e.$t("Congratulations! Successfully applied")) + " "), n("span", [e._v(e._s(e.$t("BOSS-DAO Partnership")))])]) : n("h5", [e._v(e._s(e.$t("Once staking")) + " "), n("span", [e._v("300 USDT")]), e._v(" " + e._s(e.$t("you can apply for")) + " "), n("span", [e._v(e._s(e.$t("BOSS-DAO Partnership")))])]), e._v(" "), n("p", [e._v(e._s(e.time) + " - " + e._s(e.time2))]), e._v(" "), e.showTime ? n("p", {
                     staticClass: "time"
                 }, [n("span", [e._v(e._s(e.$t("Distance to start")))]), e._v(": "), e.dateData ? n("flip-countdown", {
                     attrs: {
@@ -524,7 +524,7 @@ webpackJsonp([2], {
                     }
                 })]), n("span", [e._v("#" + e._s(e.nftName))])])]), e._v(" "), e.canClaim ? e._e() : n("div", {
                     staticClass: "canDiv"
-                }, [n("h2", [e._v(e._s(e.$t("Congratulations! You get"))), n("span", [e._v(e._s(e.$t("FP-DAO IDO Amount 200 USDT")))])]), e._v(" "), n("router-link", {
+                }, [n("h2", [e._v(e._s(e.$t("Congratulations! You get"))), n("span", [e._v(e._s(e.$t("BOSS-DAO IDO Amount 200 USDT")))])]), e._v(" "), n("router-link", {
                     attrs: {
                         to: {
                             path: "/idoClaim"
@@ -570,7 +570,7 @@ webpackJsonp([2], {
                         src: a("JUZT"),
                         alt: "rule"
                     }
-                }), n("span", [e._v(e._s(e.$t("After claiming 500 $BOSS001, please confirm your team structure of FP-DAO before $BOSS listing (FP-DAO binding relations will be confirmed once you send at least 1 $BOSS001 to addresses never with $BOSS001 before).")))])])]), e._v(" "), n("div", {
+                }), n("span", [e._v(e._s(e.$t("After claiming 500 $BOSS001, please confirm your team structure of BOSS-DAO before $BOSS listing (BOSS-DAO binding relations will be confirmed once you send at least 1 $BOSS001 to addresses never with $BOSS001 before).")))])])]), e._v(" "), n("div", {
                     staticClass: "oRule"
                 }, [n("p", [n("img", {
                     attrs: {
@@ -611,7 +611,7 @@ webpackJsonp([2], {
                     staticStyle: {
                         color: "#00F195"
                     }
-                }), e._v(" "), n("p", [e._v(e._s(e.$t("Congratulations on becoming an FP-DAO partner!")))]), e._v(" "), n("el-button", {
+                }), e._v(" "), n("p", [e._v(e._s(e.$t("Congratulations on becoming an BOSS-DAO partner!")))]), e._v(" "), n("el-button", {
                     attrs: {
                         type: "primary"
                     },
@@ -667,7 +667,7 @@ webpackJsonp([2], {
                     }
                 }), e._v(" "), n("p", {
                     staticClass: "fail"
-                }, [e._v(e._s(e.$t("There is no $BOSS001 in your wallet, please contact your FP-DAO organization.")))]), e._v(" "), n("el-button", {
+                }, [e._v(e._s(e.$t("There is no $BOSS001 in your wallet, please contact your BOSS-DAO organization.")))]), e._v(" "), n("el-button", {
                     on: {
                         click: function(t) {
                             e.wait = !1

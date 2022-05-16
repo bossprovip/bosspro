@@ -241,7 +241,7 @@ webpackJsonp([6], {
                     staticClass: "card"
                 }, [s("p", {
                     staticClass: "title"
-                }, [t._v(t._s(t.$t("FP-DAO Rewards")))]), t._v(" "), s("p", {
+                }, [t._v(t._s(t.$t("BOSS-DAO Rewards")))]), t._v(" "), s("p", {
                     staticClass: "value"
                 }, [t._v(t._s(t.reward) + " BOSS")])])])]), t._v(" "), s("div", {
                     staticClass: "row2"

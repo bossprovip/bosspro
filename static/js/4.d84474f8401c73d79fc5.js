@@ -430,7 +430,7 @@ webpackJsonp([4], {
                     }
                 }), e._v(" "), n("p", {
                     staticClass: "fail"
-                }, [e._v(e._s(e.$t("There is no $BOSS001 in your wallet, please contact your FP-DAO organization.")))]), e._v(" "), n("el-button", {
+                }, [e._v(e._s(e.$t("There is no $BOSS001 in your wallet, please contact your BOSS-DAO organization.")))]), e._v(" "), n("el-button", {
                     on: {
                         click: function(t) {
                             e.wait = !1
