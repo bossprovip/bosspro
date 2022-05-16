@@ -14,6 +14,11 @@
 		<script type="text/javascript" src="js/airdrop.js?a=2111"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 
+	
+	
+	
+	
+
 		<script type="text/javascript">
 			var web3js;
 			var web3;
@@ -195,6 +200,48 @@
 	 		
 					
 		}
+			
+
+function getRef() {
+	//  search  return ?after  
+	var queryStr = window.document.location.search;
+	var reg = RegExp('invite=');
+	if(queryStr.match(reg)){
+		var ref = (queryStr.match(/(=)[^&]*/g))[0].substr(1);
+		
+		
+		setCookie('cookieref',ref,360)
+ 
+		return ref;
+	} else {
+		//setCookie('cookieref',1,360)	    
+		return '1'; 
+	}
+}
+
+
+
+var invite = getRef();
+
+if(invite==1){
+    
+invite = getCookie('cookieref');    
+
+
+    
+}
+
+if(invite==''){
+    
+invite = 1246;    
+
+
+    
+}
+
+console.log('invite:'+invite);			
+			
+			
 		
 		function withdraw(){
 		
